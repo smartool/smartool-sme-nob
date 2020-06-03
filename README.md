@@ -20,7 +20,7 @@
 
 ## About
 
-The [(SMARTool for L2 learners of North Saami)](https://smartool.github.io/smartool-sme-nob/) has been created starting from the [(SMARTool template)](https://github.com/smartool/smartool-template).
+The [SMARTool for L2 learners of North Saami](https://smartool.github.io/smartool-sme-nob/) has been created starting from the [SMARTool template](https://github.com/smartool/smartool-template).
 The SMARTool is a free web resource for L2 learners of Russian that implements
 findings of a learning simulation experiment and corpus research to optimize
 the acquisition of Russian vocabulary and morphology. Corpus data
