@@ -38,7 +38,6 @@ var map_level_to_analyses = {};
 var map_word_to_translation = {};
 var map_topic_to_translation = {};
 
-
 function load_data(args) {
     var app = new Vue({
         el: '#app',
@@ -215,7 +214,15 @@ function load_data(args) {
                             }
 
                             var translation = results.data[i]['User language gloss'];
-                            map_word_to_translation[word] = translation;
+                            //When there is a word with more than one translation, only the last translation is displayed
+                            //To fix this, check if there is a new translation for an already existing word
+                            if (!(map_word_to_translation.hasOwnProperty(word))){
+                              map_word_to_translation[word] = translation
+                            } else {
+                              if (!(map_word_to_translation[word].split(", ").includes(translation))) {
+                                map_word_to_translation[word] = map_word_to_translation[word] + ", " + translation
+                              }
+                            }
                             map_level_to_words = append(map_level_to_words, level, word);
                             map_level_to_words = append(map_level_to_words, all_levels, word);
 
